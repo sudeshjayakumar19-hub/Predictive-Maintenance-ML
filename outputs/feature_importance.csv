@@ -1,0 +1,16 @@
+Rank,RF_Feature,RF_Importance,XGB_Feature,XGB_Importance,LR_Feature,LR_Abs_Coefficient
+1,sensor_4_roll_mean_5,0.13655,sensor_4_roll_mean_5,0.39036,sensor_9_roll_mean_5,1.62448
+2,sensor_15_roll_mean_5,0.10001,sensor_11_roll_mean_5,0.11598,sensor_13_roll_mean_5,1.58489
+3,sensor_21_roll_mean_5,0.06677,sensor_17_roll_mean_5,0.09219,sensor_14_roll_mean_5,1.20518
+4,sensor_11_roll_mean_5,0.06644,sensor_15_roll_mean_5,0.06036,sensor_12_roll_mean_5,0.48085
+5,sensor_3_roll_mean_5,0.06013,sensor_9_lag1,0.02184,sensor_11,0.42239
+6,sensor_17_roll_mean_5,0.05384,sensor_21_roll_mean_5,0.01988,sensor_11_lag1,0.39173
+7,sensor_2_roll_mean_5,0.05008,sensor_7_roll_mean_5,0.01681,sensor_4,0.38425
+8,sensor_11_lag1,0.04828,sensor_3_roll_mean_5,0.01575,sensor_4_lag1,0.37844
+9,sensor_7_roll_mean_5,0.0389,sensor_9_roll_mean_5,0.0156,sensor_12,0.34044
+10,sensor_12_roll_mean_5,0.03788,sensor_20_roll_mean_5,0.01333,sensor_12_lag1,0.32425
+11,sensor_20_roll_mean_5,0.03011,sensor_14_roll_mean_5,0.01137,sensor_7,0.31803
+12,sensor_4_lag1,0.02901,sensor_2_roll_mean_5,0.00887,sensor_7_lag1,0.29702
+13,sensor_12_lag1,0.02169,sensor_12_roll_mean_5,0.00837,sensor_14_lag1,0.26453
+14,sensor_2,0.01756,sensor_9,0.0074,sensor_14,0.26138
+15,sensor_12,0.01745,sensor_13_roll_mean_5,0.00726,sensor_7_roll_mean_5,0.25704

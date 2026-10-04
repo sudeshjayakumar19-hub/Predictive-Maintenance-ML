@@ -1,0 +1,47 @@
+================================================================================
+NASA C-MAPSS FD001 DATASET & PREPROCESSING SUMMARY
+Predictive Maintenance ML Capstone Project - Step 2
+================================================================================
+
+1. BASIC DATASET METRICS
+--------------------------------------------------------------------------------
+- Total Processed Rows       : 20,631
+- Total Processed Columns    : 84
+- Unique Engines (Units)     : 100 (Unit 1 to Unit 100)
+- Total Raw Sensors          : 21 (sensor_1 through sensor_21)
+- Active/Informative Sensors : 14
+- Constant/Inactive Sensors  : 7
+- Operational Settings       : 3 (op_setting_1, op_setting_2, op_setting_3)
+
+2. ENGINE LIFESPAN METRICS (Full Run-to-Failure Trajectories)
+--------------------------------------------------------------------------------
+- Minimum Lifespan (cycles)  : 128 (Engine 39)
+- Maximum Lifespan (cycles)  : 362 (Engine 69)
+- Mean Lifespan (cycles)     : 206.31
+- Median Lifespan (cycles)   : 199.00
+- Total Operational Cycles   : 2,244,815
+
+3. TARGET LABEL & FAILURE RISK CONFIGURATION
+--------------------------------------------------------------------------------
+- Failure Window Threshold   : 30 cycles (target = 1 if RUL <= 30 else 0)
+- Failure Risk Samples (1)   : 3,100 (15.03%)
+- Normal Operation Samples (0): 17,531 (84.97%)
+- Class Imbalance Ratio      : 5.66:1 (Negative : Positive)
+
+4. FEATURE ENGINEERING SPECIFICATION
+--------------------------------------------------------------------------------
+- Base Raw Features Retained : 24
+- Engineered Time-Series Feat: 56
+- Total Model Input Candidate: 80
+- Lag & Rolling Mechanics    : Strictly causal backward-looking per engine.
+                               Prevents cross-engine contamination and future lookahead.
+
+Engineered Feature Names (56 features):
+sensor_2_lag1, sensor_2_delta, sensor_2_roll_mean_5, sensor_2_roll_std_5, sensor_3_lag1, sensor_3_delta, sensor_3_roll_mean_5, sensor_3_roll_std_5, sensor_4_lag1, sensor_4_delta, sensor_4_roll_mean_5, sensor_4_roll_std_5, sensor_7_lag1, sensor_7_delta, sensor_7_roll_mean_5, sensor_7_roll_std_5, sensor_8_lag1, sensor_8_delta, sensor_8_roll_mean_5, sensor_8_roll_std_5, sensor_9_lag1, sensor_9_delta, sensor_9_roll_mean_5, sensor_9_roll_std_5, sensor_11_lag1, sensor_11_delta, sensor_11_roll_mean_5, sensor_11_roll_std_5, sensor_12_lag1, sensor_12_delta, sensor_12_roll_mean_5, sensor_12_roll_std_5, sensor_13_lag1, sensor_13_delta, sensor_13_roll_mean_5, sensor_13_roll_std_5, sensor_14_lag1, sensor_14_delta, sensor_14_roll_mean_5, sensor_14_roll_std_5, sensor_15_lag1, sensor_15_delta, sensor_15_roll_mean_5, sensor_15_roll_std_5, sensor_17_lag1, sensor_17_delta, sensor_17_roll_mean_5, sensor_17_roll_std_5, sensor_20_lag1, sensor_20_delta, sensor_20_roll_mean_5, sensor_20_roll_std_5, sensor_21_lag1, sensor_21_delta, sensor_21_roll_mean_5, sensor_21_roll_std_5
+
+5. DATA LEAKAGE & INTEGRITY VERIFICATION
+--------------------------------------------------------------------------------
+- RUL Column Included For Target Formulation Only (Excluded from ML Input Features)
+- Unit ID and Time Cycles Preserved for Grouped Splitting and Evaluation
+- Missing / Null Values Across Entire Dataset: 0
+================================================================================

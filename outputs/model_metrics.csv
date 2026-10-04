@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1,ROC_AUC,PR_AUC,True_Positives,True_Negatives,False_Positives,False_Negatives,False_Alarms
+Logistic Regression,0.935,0.6962,0.9387,0.7995,0.9875,0.9376,582,3619,254,38,254
+Random Forest,0.9546,0.7881,0.9177,0.848,0.989,0.9456,569,3720,153,51,153
+XGBoost,0.9475,0.7588,0.9081,0.8267,0.988,0.9456,563,3694,179,57,179
